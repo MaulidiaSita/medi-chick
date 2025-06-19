@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sistem Deteksi Penyakit Ayam Broiler</title>
+
+    <!--Css file-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #eb6425;
+        --primary-hover: #f13e1f;
+        --text-primary: #1f2937;
+        --text-secondary: #6b7280;
+        --background: #f8fafc;
+        --card-bg: #ffffff;
+        --border-color: #e5e7eb;
+        --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --success-color: #e9432d;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Winky Rough", sans-serif;
+        background: var(--background);
+        color: var(--text-primary);
+        line-height: 1.6;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .result-card {
+        background: var(--card-bg);
+        border-radius: 1rem;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+        padding: 2rem;
+      }
+
+      .result-header {
+        background: linear-gradient(
+          135deg,
+          var(--success-color) 0%,
+          #e9432d 100%
+        );
+        padding: 1.5rem;
+        text-align: center;
+        color: white;
+        border-radius: 0.75rem 0.75rem 0 0;
+        margin-bottom: 2rem;
+      }
+
+      .result-header h2 {
+        margin: 0;
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .image-section {
+        text-align: center;
+      }
+
+      .detected-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border: 3px solid white;
+        transition: transform 0.3s ease;
+      }
+
+      .detected-image:hover {
+        transform: scale(1.05);
+      }
+
+      .image-placeholder {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+        background: #f3f4f6;
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-secondary);
+        border: 2px dashed var(--border-color);
+        margin: 0 auto;
+        font-size: 3rem;
+      }
+
+      .info-section h3 {
+        color: var(--text-primary);
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-align: justify;
+      }
+
+      .disease-description {
+        background: #f8fafc;
+        border-left: 4px solid var(--primary-color);
+        padding: 1.5rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        white-space: pre-line;
+      }
+
+      .action-section {
+        text-align: center;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .btn-detect-again {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--primary-hover) 100%
+        );
+        color: white;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .btn-detect-again:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        color: white;
+        text-decoration: none;
+      }
+
+      .hasil-deteksi .gambar img {
+        width: 300px; /* ukuran gambar bisa kamu sesuaikan */
+        height: auto;
+        border-radius: 8px; /* agar sudut gambar membulat */
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .content-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .result-header {
+          padding: 1.5rem;
+        }
+
+        .result-header h2 {
+          font-size: 1.5rem;
+        }
+
+        .result-card {
+          padding: 1.5rem;
+        }
+
+        .detected-image,
+        .image-placeholder {
+          max-width: 250px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .result-header {
+          padding: 1rem;
+        }
+
+        .result-header h2 {
+          font-size: 1.25rem;
+        }
+
+        .btn-detect-again {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      /* Animation */
+      .result-card {
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="result-card">
+        <div class="result-header">
+          <h2>Hasil Deteksi Penyakit</h2>
+          <h2>Penyakit Terdeteksi: {{ prediction }}</h2>
+        </div>
+        <div class="content-grid">
+          <div class="image-section">
+            {% if gambar %}
+            <img
+              src="{{ url_for('static', filename='images/hasil/' + gambar) }}"
+              alt="{{ prediction }}"
+              class="detected-image"
+            />
+            {% else %}
+            <div class="image-placeholder">
+              <span>Tidak Ada Gambar</span>
+            </div>
+            {% endif %}
+          </div>
+          <div class="info-section">
+            <h3>Deskripsi Penyakit</h3>
+            <div class="disease-description">{{ disease_info }}</div>
+            <div class="action-section">
+              <a href="{{ url_for('deteksi') }}" class="btn-detect-again"
+                >Deteksi Ulang</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/Headroom.js"></script>
+    <script src="../static/js/jQuery.headroom.js"></script>
+    <script src="../static/js/slick.min.js"></script>
+    <script src="../static/js/custom.js"></script>
+    <script src="../static/js/app.js"></script>
+  </body>
+</html>

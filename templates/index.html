@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Home</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/art.css" />
+  </head>
+
+  <body>
+    <section class="preloader">
+      <div class="spinner">
+        <span class="sk-inner-circle"></span>
+      </div>
+    </section>
+
+    <main>
+      <nav class="navbar navbar-expand-lg" style="font-family: Poppins, sans-serif !important;">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <a class="logo" href="{{ url_for('home') }}"
+            ><img src="../static/images/logo/gambar.png" alt="Logo"
+          /></a>
+          <a class="navbar-brand" href="{{ url_for('home') }}"
+            ><strong
+              ><span>MediChick</span>
+              <h1 class="custom-heading"></h1></strong
+          ></a>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('deteksi') }}">
+                  Diagnosa
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('detail_penyakit') }}">
+                  Detail Penyakit
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('pencegahan_penyakit') }}">
+                  Pencegahan Penyakit
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('riwayat') }}">
+                  Riwayat
+                </a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a href="#" role="button" class="nav-link dropdown-toggle custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown">
+                  <i class="bi bi-person me-1"></i>
+                  {% if username %}
+                    <span>{{ username }}</span>
+                  {% endif %}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="{{ url_for('logout') }}"
+                      >Logout</a>
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="slick-slideshow">
+        <div class="slick-custom">
+          <img
+            src="../static/images/slideshow/Home.png"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="slick-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 col-10">
+                  <h1 class="slick-title">Prediksi Awal</h1>
+                  <p class="lead text-white mt-lg-3 mb-lg-5">
+                    Bersama MediChick, Cegah penyakit sejak awal.
+                  </p>
+                  <a
+                    href="{{ url_for('login', next='deteksi') }}"
+                    class="btn custom-btn"
+                    >Ayo cek sekarang!</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slick-custom">
+          <img
+            src="../static/images/slideshow/Home2.png"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="slick-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 col-10">
+                  <h1 class="slick-title">Cek Gejala</h1>
+                  <p class="lead text-white mt-lg-3 mb-lg-5">
+                    Segera cek berdasarkan gejala yang timbul!
+                  </p>
+                  <a
+                    href="{{ url_for('login', next='deteksi') }}"
+                    class="btn custom-btn"
+                    >Ayo Cek Sekarang!</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2 class="mb-5">
+                Jaga Kesehatan Ayam Dengan Prediksi Penyakit Yang Tepat with us!
+              </h2>
+            </div>
+            <div class="col-lg-10 col-12">
+              <div class="tab-content mt-2" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-home"
+                  role="tabpanel"
+                >
+                  <div class="row">
+                    <div class="col-lg-7 col-12 d-flex justify-content-center">
+                      <img
+                        src="../static/images/about/About.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
+                      <h4 class="mb-3"><span>A</span>bout us</h4>
+                      <p>Welcome to MediChick!</p>
+                      <p>
+                        MediChick merupakan sebuah aplikasi yang dirancang untuk
+                        membantu peternak ayam broiler dalam memantau kesehatan
+                        ayam dengan lebih efektif. MediChick memungkinkan
+                        prediksi penyakit sejak dini, sehingga peternak dapat
+                        mengambil tindakan pencegahan atau penanganan dengan
+                        cepat dan tepat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <h4>MediChick</h4>
+            <p class="copyright-text mt-4">
+              Copyright © 2025 <strong>MediChick</strong>
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <h5>Sitemap</h5>
+            <ul class="footer-menu">
+              <li class="footer-menu-item">
+                <a href="{{ url_for('about') }}" class="footer-menu-link"
+                  >About</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a href="{{ url_for('deteksi') }}" class="footer-menu-link"
+                  >Deteksi</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a
+                  href="{{ url_for('detail_penyakit') }}"
+                  class="footer-menu-link"
+                  >Detail Penyakit</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a
+                  href="{{ url_for('pencegahan_penyakit') }}"
+                  class="footer-menu-link"
+                  style="white-space: nowrap !important"
+                  >Pencegahan Penyakit</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a href="{{ url_for('riwayat') }}" class="footer-menu-link"
+                  >Riwayat</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/Headroom.js"></script>
+    <script src="../static/js/jQuery.headroom.js"></script>
+    <script src="../static/js/slick.min.js"></script>
+    <script src="../static/js/custom.js"></script>
+    <script src="../static/js/app.js"></script>
+    <script>
+      var $SCRIPT_ROOT = "{{ request.script_root|tojson }}";
+    </script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const chatbox = new Chatbox();
+        chatbox.display();
+      });
+    </script>
+    <script>
+        window.addEventListener("pageshow", function(event) {
+          if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+            window.location.reload();
+          }
+        });
+      </script>      
+  </body>
+</html>

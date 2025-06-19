@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beranda</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../static/css/slick.css" />
+    <link rel="stylesheet" href="../static/css/art.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/chat.css') }}"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .product-image {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      /* Main content styling */
+      main {
+        flex-grow: 1;
+        padding-bottom: 40px; /* Beri ruang untuk footer */
+        padding-top: 80px;
+      }
+
+      .stat-box {
+        background-color: #ad1f1fe8;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 10px;
+        font-size: 18px;
+      }
+
+      .stat-box strong {
+        display: block;
+        font-size: 32px;
+      }
+
+      h1.welcome-title {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 30px; /* Kurangi jarak dari navbar */
+        color: #b83524;
+      }
+
+      h2.system-name {
+        text-align: center;
+        font-size: 24px;
+        color: #9c2828;
+        margin-bottom: 30px;
+      }
+
+      /* Tambahan untuk preloader */
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="preloader">
+      <div class="spinner">
+        <span class="sk-inner-circle"></span>
+      </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="logo" href="{{ url_for('home') }}"
+          ><img src="../static/images/logo/gambar.png" alt="Logo"
+        /></a>
+        <a class="navbar-brand" href="{{ url_for('home') }}"
+          ><strong><span>MediChick</span></strong></a
+        >
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('beranda') }}">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('about') }}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('deteksi') }}"> Diagnosa </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('detail_penyakit') }}"
+                >Detail Penyakit</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('pencegahan_penyakit') }}"
+                >Pencegahan Penyakit</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('riwayat') }}">Riwayat</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                role="button"
+                class="nav-link dropdown-toggle bi bi-person custom-icon me-3"
+                id="navbarDropdown"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              ></a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="{{ url_for('logout') }}"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="text-center">
+          <h1 class="welcome-title">SELAMAT DATANG DI</h1>
+          <h2 class="system-name">
+            MEDICHICK (Sistem Prediksi Penyakit Pada Ayam)
+          </h2>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-4 mb-3">
+            <div class="stat-box">
+              <strong>36</strong>
+              Total Gejala
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="stat-box">
+              <strong>8</strong>
+              Total Penyakit
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <h4>MediChick</h4>
+            <p class="copyright-text mt-4">
+              Copyright © 2025 <strong>MediChick</strong>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <h5>Sitemap</h5>
+            <ul class="footer-menu">
+              <li class="footer-menu-item">
+                <a href="{{ url_for ('home') }}" class="footer-menu-link"
+                  >Beranda</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a href="{{ url_for ('about') }}" class="footer-menu-link"
+                  >About</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a href="{{ url_for ('deteksi') }}" class="footer-menu-link"
+                  >Deteksi</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a
+                  href="{{ url_for ('detail_penyakit') }}"
+                  class="footer-menu-link"
+                  >Detail Penyakit</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a
+                  href="{{ url_for ('pencegahan_penyakit') }}"
+                  class="footer-menu-link"
+                  >Pencegahan Penyakit</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a href="{{ url_for ('riwayat') }}" class="footer-menu-link"
+                  >Riwayat</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/Headroom.js"></script>
+    <script src="../static/js/jQuery.headroom.js"></script>
+    <script src="../static/js/slick.min.js"></script>
+    <script src="../static/js/custom.js"></script>
+    <script src="../static/js/app.js"></script>
+    <script>
+      var $SCRIPT_ROOT = "{{ request.script_root|tojson }}";
+    </script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const chatbox = new Chatbox();
+        chatbox.display();
+      });
+    </script>
+  </body>
+</html>

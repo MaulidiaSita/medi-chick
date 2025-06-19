@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Registrasi</title>
+
+    <!-- Fonts dan Bootstrap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/css/art.css" />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: rgb(247, 236, 228);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-container {
+        background: rgb(253, 252, 251);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 500px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin: 10px 0 10px;
+      }
+
+      .input-group {
+        position: relative;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 8px 35px 8px 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      .input-group i {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #aaa;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #e44225;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #e4605c;
+      }
+
+      .error {
+        color: red;
+        text-align: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login-container">
+      <h2>Register</h2>
+
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <ul>
+        {% for category, message in messages %}
+        <li class="alert alert-{{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% endwith %}
+
+      <form
+        action="{{ url_for('register', next=request.args.get('next')) }}"
+        method="POST"
+        onsubmit="return validatePassword()"
+      >
+        <input
+          type="hidden"
+          name="next"
+          value="{{ request.args.get('next') }}"
+        />
+
+        <label for="username">Username</label>
+        <div class="input-group">
+          <input type="text" id="username" name="username" required />
+          <i class="bi bi-person-fill"></i>
+        </div>
+
+        <label for="email">Email</label>
+        <div class="input-group">
+          <input type="email" id="email" name="email" required />
+          <i class="bi bi-envelope-fill"></i>
+        </div>
+
+        <label for="password">Password</label>
+        <div class="input-group">
+          <input type="password" id="password" name="password" required />
+          <i class="bi bi-eye-slash" id="togglePassword"></i>
+        </div>
+
+        <label for="confirm_password">Konfirmasi Password</label>
+        <div class="input-group">
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+            required
+          />
+          <i class="bi bi-eye-slash" id="toggleConfirmPassword"></i>
+        </div>
+
+        <button type="submit">Daftar</button>
+      </form>
+
+      <p id="error" class="error"></p>
+    </div>
+
+    <!-- Validasi & Show Password JS -->
+    <script>
+      // Toggle password visibility untuk password
+      document
+        .getElementById("togglePassword")
+        .addEventListener("click", function () {
+          const password = document.getElementById("password");
+          const type =
+            password.getAttribute("type") === "password" ? "text" : "password";
+          password.setAttribute("type", type);
+          this.classList.toggle("bi-eye");
+          this.classList.toggle("bi-eye-slash");
+        });
+
+      // Toggle password visibility untuk konfirmasi password
+      document
+        .getElementById("toggleConfirmPassword")
+        .addEventListener("click", function () {
+          const password = document.getElementById("confirm_password");
+          const type =
+            password.getAttribute("type") === "password" ? "text" : "password";
+          password.setAttribute("type", type);
+          this.classList.toggle("bi-eye");
+          this.classList.toggle("bi-eye-slash");
+        });
+
+      // Validasi password kompleks
+      function validatePassword() {
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirm_password").value;
+        const error = document.getElementById("error");
+
+        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+        if (!regex.test(password)) {
+          error.textContent =
+            "Kata sandi harus minimal 8 karakter dan mengandung huruf besar, kecil, angka, dan simbol.";
+          return false;
+        }
+
+        if (password !== confirmPassword) {
+          error.textContent = "Konfirmasi kata sandi tidak cocok.";
+          return false;
+        }
+
+        error.textContent = "";
+        return true;
+      }
+    </script>
+
+    <!-- Static JS -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/Headroom.js"></script>
+    <script src="../static/js/jQuery.headroom.js"></script>
+    <script src="../static/js/slick.min.js"></script>
+    <script src="../static/js/custom.js"></script>
+    <script src="../static/js/app.js"></script>
+  </body>
+</html>

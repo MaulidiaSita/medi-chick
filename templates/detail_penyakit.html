@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Penyakit </title>
+            <!-- CSS FILES -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+             <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" >
+             <link rel="stylesheet"type="text/css" href="../static/css/bootstrap-icons.css" >
+             <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+             <link rel="stylesheet"type="text/css" href="../static/css/art.css"> 
+    <style>
+        :root {
+        --primary-color: #e67e22;
+        --secondary-color: #d35400;
+        --dark-color: #34495e;
+        --light-color: #f9f9f9;
+        --danger-color: #c0392b;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      main {
+        padding-top: 100px;
+        min-height: 50vh;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: 700;
+        margin-bottom: 30px;
+        position: relative;
+        display: inline-block;
+        font-family: "poppins", sans-serif;
+      }
+
+      h2:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+
+      .card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-bottom: 30px;
+        height: 100%;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-title {
+        font-weight: 600;
+        color: var(--dark-color);
+        margin: 15px 0;
+        text-align: center;
+      }
+
+      .product-image {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .card-body-text-center {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-danger {
+        background-color: var(--danger-color);
+        border: none;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .btn-danger:hover {
+        background-color: #b03a2e;
+        transform: scale(1.05);
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        border: none;
+        padding: 10px 30px;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--secondary-color);
+        transform: scale(1.05);
+      }
+
+      .logo img {
+        width: 55px;
+        height: 55px;
+        margin-right: 10px;
+        border-radius: 50%; 
+      }
+
+      .page-header {
+        background-color: #f8f7ff;
+        padding: 30px 0;
+        border-radius: 15px;
+        margin-bottom: 40px;
+      }
+
+      .disease-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+      }
+
+      .numbered-badge {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #f1c40f;
+        color: #000;
+        font-weight: 700;
+        padding: 6px 16px;
+        font-size: 1.2rem;
+        z-index: 2;
+        box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+       .type-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        z-index: 2;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .badge-viral {
+        background-color: #c0392b;
+        color: white;
+      }
+
+      .badge-bacterial {
+        background-color: #3498db;
+        color: white;
+      }
+
+      .badge-fungal {
+        background-color: #f39c12;
+        color: white;
+      }
+
+      .badge-respiratory {
+        background-color: #27ae60;
+        color: white;
+      }
+
+      .btn-detail {
+        background-color: #c0392b;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 10px 28px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(192, 57, 43, 0.2);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        align-self: center;
+        text-decoration: none;
+      }
+
+      .btn-detail:hover {
+        background-color: #a93226;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(192, 57, 43, 0.3);
+        color: white;
+      }
+
+      .btn-detail i {
+        transition: transform 0.3s ease;
+      }
+
+      .btn-detail:hover i {
+        transform: translateX(3px);
+      }
+
+
+      @media (max-width: 768px) {
+        .disease-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .disease-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .btn-detail {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+
+
+      }
+    </style>
+</head>
+<body>
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+
+    <main>
+        <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a class="logo" href="{{ url_for ('home') }}" ><img src="../static/images/logo/gambar.png" alt="Logo"></a></li>
+                    <a class="navbar-brand" href="{{ url_for ('home') }}" > <strong><span>MediChick</span><h1 class="custom-heading"></h1></strong></a>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                    
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('about') }}"> About </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('deteksi') }}"> Diagnosa </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('detail_penyakit') }}"> Detail Penyakit </a>
+                            </li>
+
+    
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('pencegahan_penyakit') }}">Pencegahan Penyakit </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('riwayat') }}"> Riwayat </a>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                              <a href="#" role="button" class="nav-link dropdown-toggle custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown">
+                            <i class="bi bi-person me-1"></i>
+                            {% if username %}
+                              <span>{{ username }}</span>
+                            {% endif %}
+                          </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                  <a class="dropdown-item" href="{{ url_for('logout') }}"
+                                    >Logout</a
+                                  >
+                                </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </nav>
+        
+        <div class="container">
+        <div class="page-header text-center">
+          <h2 class="text-center">Detail Penyakit</h2>
+          <p class="text-muted">
+            Informasi lengkap tentang berbagai peyakit pada ayam
+          </p>
+        </div>
+
+             <div class="disease-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <div class="position-relative overflow-hidden">
+              <img
+                src="../static/images/detail/6.png" class="img-fluid product-image" alt="Tetelo"/>
+              <div class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 m-2 rounded">Viral</div>
+              <div class="numbered-badge">01</div>
+            </div>
+            <div class="card-body-text-center">
+              <h5 class="card-title">Tetelo</h5>
+              <p class="text-muted text-center small mb-3">Penyakit virus yang menyerang sistem pernapasan</p>
+              <a href="{{ url_for('tetelo') }}" class="btn btn-danger">Detail</a>
+            </div>
+          </div>
+    
+            <div class="card">
+            <div class="position-relative overflow-hidden">
+              <img src="../static/images/detail/3.png" class="img-fluid product-image" alt="Feses Kapur"/>
+              <div class="position-absolute top-0 end-0 bg-warning text-dark px-2 py-1 m-2 rounded">Fungal</div>
+              <div class="numbered-badge">02</div>
+            </div>
+            <div class="card-body-text-center">
+              <h5 class="card-title">Feses Kapur</h5>
+              <p class="text-muted text-center small mb-3">Infeksi jamur pada saluran pencernaan</p>
+              <a href="{{ url_for('feses_kapur') }}" class="btn btn-danger">Detail</a>
+            </div>
+          </div>
+                            
+            <!-- Card 3 -->
+             <div class="card">
+                <div class="position-relative overflow-hidden">
+                <img src="../static/images/detail/4.png" class="img-fluid product-image" alt="Gumboro"/>
+              <div class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 m-2 rounded">Viral</div>
+              <div class="numbered-badge">03</div>
+            </div>
+            <div class="card-body-text-center">
+              <h5 class="card-title">Gumboro</h5>
+              <p class="text-muted text-center small mb-3">Penyakit yang menyerang sistem kekebalan tubuh</p>
+              <a href="{{ url_for('gumboro') }}" class="btn btn-danger">Detail</a>
+            </div>
+          </div>
+                   
+
+            <!-- Card 4 -->
+            <div class="card">
+            <div class="position-relative overflow-hidden">
+              <img src="../static/images/detail/2.png" class="img-fluid product-image" alt="Penyakit Ngorok"/>
+              <div class="position-absolute top-0 end-0 bg-info text-white px-2 py-1 m-2 rounded">Respirasi</div>
+              <div class="numbered-badge">04</div>
+            </div>
+            <div class="card-body-text-center">
+              <h5 class="card-title">Penyakit Ngorok</h5>
+              <p class="text-muted text-center small mb-3">Gangguan pernapasan dengan gejala ngorok </p>
+              <a href="{{ url_for('penyakit_ngorok') }}" class="btn btn-danger">Detail</a>
+            </div>
+          </div>
+
+            <!-- Baris 2-->
+            <!-- Card 5-->
+             <div class="card">
+            <div class="position-relative overflow-hidden">
+              <img src="../static/images/detail/1.png" class="img-fluid product-image" alt="Flu Burung"/>    
+              <div class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 m-2 rounded">Viral</div>
+              <div class="numbered-badge">05</div>
+            </div>
+            <div class="card-body-text-center">
+              <h5 class="card-title">Flu Burung</h5>
+              <p class="text-muted text-center small mb-3">Penyakit yang dapat menular ke manusia</p>
+              <a href="{{ url_for('flu_burung') }}" class="btn btn-danger">Detail</a>
+            </div>
+          </div>
+
+            <!-- CArd 6-->
+            <div class="card">
+            <div class="position-relative overflow-hidden">
+              <img  src="../static/images/detail/5.png" class="img-fluid product-image" alt="Kolibasilosis"/>
+              <div class="position-absolute top-0 end-0 bg-primary text-white px-2 py-1 m-2 rounded">Bakteri </div>
+              <div class="numbered-badge">06</div>
+            </div>
+            <div class="card-body-text-center">
+              <h5 class="card-title">Kolibasilosis</h5>
+              <p class="text-muted text-center small mb-3">Infeksi bakteri E. coli pada unggas</p>
+              <a href="{{ url_for('kolibasilosis') }}" class="btn btn-danger">Detail</a>
+            </div>
+          </div>
+
+            <!-- Card 7-->
+            <div class="card">
+            <div class="position-relative overflow-hidden">
+              <img src="../static/images/detail/8.png" class="img-fluid product-image" alt="Snot"/>
+              <div class="position-absolute top-0 end-0 bg-info text-white px-2 py-1 m-2 rounded">Respirasi</div>
+              <div class="numbered-badge">07</div>
+            </div>
+            <div class="card-body-text-center">
+              <h5 class="card-title">Snot</h5>
+              <p class="text-muted text-center small mb-3">Infeksi pada saluran pernapasan atas</p>
+              <a href="{{ url_for('snot') }}" class="btn btn-danger">Detail</a>
+            </div>
+          </div>
+
+            <!-- Card 8 -->
+            <div class="card">
+            <div class="position-relative overflow-hidden">
+              <img src="../static/images/detail/09.png" class="img-fluid product-image" alt="Snot"/>
+              <div class="position-absolute top-0 end-0 bg-info text-white px-2 py-1 m-2 rounded">Bakteri</div>
+              <div class="numbered-badge">08</div>
+            </div>
+            <div class="card-body-text-center">
+              <h5 class="card-title">Kolera</h5>
+              <p class="text-muted text-center small mb-3">Infeksi bakteri yang menyerang sistem pencernaan</p>     
+             <a href="{{ url_for('kolera') }}" class="btn btn-danger">Detail</a>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <h4>MediChick</h4>
+            </p>
+            <p
+              class="copyright-text mt-4"
+              style="
+                font-family: Poppins, sans-serif !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.9rem !important;
+                padding-top: 20px !important;
+                margin-bottom: 1rem !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+                text-align: left !important;
+              "
+            >
+              Copyright © 2025 <strong>MediChick</strong>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <h5>Sitemap</h5>
+            <ul class="footer-menu">
+              <li class="footer-menu-item">
+                <a href="{{ url_for ('about') }}" class="footer-menu-link"
+                  >About</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a href="{{ url_for ('deteksi') }}" class="footer-menu-link"
+                  >Deteksi</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a
+                  href="{{ url_for ('detail_penyakit') }}"
+                  class="footer-menu-link"
+                  >Detail Penyakit</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a
+                  href="{{ url_for ('pencegahan_penyakit') }}"
+                  class="footer-menu-link" style="white-space: nowrap
+                  !important;"  
+                  >Pencegahan Penyakit</a>
+              </li>
+              <li class="footer-menu-item">
+                <a href="{{ url_for ('riwayat') }}" class="footer-menu-link"
+                  >Riwayat</a
+                >
+              </li>
+            </ul>
+          </div>
+        </footer>
+
+    
+            <!-- JAVASCRIPT FILES -->
+            <script src="../static/js/jquery.min.js"></script>
+            <script src="../static/js/bootstrap.bundle.min.js"></script>
+            <script src="../static/js/Headroom.js"></script>
+            <script src="../static/js/jQuery.headroom.js"></script>
+            <script src="../static/js/slick.min.js"></script>
+            <script src="../static/js/custom.js"></script>
+            <script>
+              window.addEventListener("pageshow", function(event) {
+                if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+                  window.location.reload();
+                }
+              });
+            </script>
+            
+</body>
+</html>

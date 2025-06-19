@@ -1,0 +1,30 @@
+2025-04-21 09:44:11,296 - INFO - Aplikasi Deteksi Penyakit Ayam dimulai [in D:\KULIAH\Semester 8\Tugas Akhir\Website\website\app.py:283]
+2025-04-21 09:45:02,884 - INFO - Aplikasi Deteksi Penyakit Ayam dimulai [in D:\KULIAH\Semester 8\Tugas Akhir\Website\website\app.py:283]
+2025-04-21 09:46:28,747 - INFO - Request predict diterima [in D:\KULIAH\Semester 8\Tugas Akhir\Website\website\app.py:116]
+2025-04-21 09:46:28,962 - INFO - Memproses input: 1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,1,1,1,0,1,0 [in D:\KULIAH\Semester 8\Tugas Akhir\Website\website\app.py:126]
+2025-04-21 09:46:30,822 - INFO - Prediksi: Feses Kapur (index: 2) [in D:\KULIAH\Semester 8\Tugas Akhir\Website\website\app.py:154]
+2025-04-21 09:46:30,830 - INFO - Rendering template hasil.html [in D:\KULIAH\Semester 8\Tugas Akhir\Website\website\app.py:159]
+2025-04-21 09:46:31,477 - ERROR - Terjadi kesalahan dalam prediksi: base.html [in D:\KULIAH\Semester 8\Tugas Akhir\Website\website\app.py:165]
+Traceback (most recent call last):
+  File "D:\KULIAH\Semester 8\Tugas Akhir\Website\website\app.py", line 160, in predict
+    return render_template('hasil.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\KULIAH\Semester 8\Tugas Akhir\Website\website\templates\hasil.html", line 1, in top-level template code
+    {% extends "base.html" %} {% block content %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: base.html

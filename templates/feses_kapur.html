@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Detail Penyakit Feses Kapur</title>
+
+        <!-- CSS FILES -->
+       <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" >
+        <link rel="stylesheet"type="text/css" href="../static/css/bootstrap-icons.css" >
+
+        <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+
+        <link rel="stylesheet"type="text/css" href="../static/css/art.css">
+        <style>
+        p, h1, h2, h3, h4, h5{
+          font-family: "Winky Rough", sans-serif;
+        }
+
+
+        .disease-section {
+          padding: 80px 0;
+          background-color: #f8f9fa;
+        }
+
+        .disease-header {
+          background: linear-gradient(135deg, #e23e32 0%, #e7862b 100%);
+          color: white;
+          padding: 60px 0;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+
+        .disease-header h1 {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+
+        .disease-header p {
+          font-size: 1rem;
+          opacity: 0.9;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        .content-card {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  margin: 0 auto 30px auto;
+  max-width: 900px;         
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-left: 5px solid #e25a24;
+  transition: transform 0.3s ease;
+}
+
+
+        .content-card:hover {
+          transform: translateY(-5px);
+        }
+
+        .content-card h2 {
+          color: #2c3e50;
+          font-size: 1rem;
+          margin-bottom: 25px;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .content-card h3 {
+          color: #e25a24;
+          font-size: 1rem;
+          margin-bottom: 20px;
+          margin-top: 30px;
+        }
+
+        .content-card h4 {
+          color: #34495e;
+          font-size: 1rem;
+          margin-bottom: 15px;
+          margin-top: 25px;
+        }
+
+        .content-card h5 {
+          color: #34495e;
+          font-size: 1rem;
+          margin-bottom: 15px;
+          margin-top: 25px;
+        }
+
+        .content-card p {
+          color: #555;
+          line-height: 1.8;
+          margin-bottom: 15px;
+          text-align: justify;
+          font-size: 1rem;
+        }
+
+        .content-card ul {
+          color: #555;
+          line-height: 1.8;
+          margin-left: 20px;
+        }
+
+        .content-card li {
+          margin-bottom: 8px;
+        }
+
+        .icon-badge {
+          width: 50px;
+          height: 50px;
+          background: linear-gradient(135deg, #e25a24, #ff7a42);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 1.5rem;
+        }
+
+        .virus-types {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 25px;
+          margin-top: 30px;
+        }
+
+        .virus-type-card {
+          background: #f8f9fa;
+          border-radius: 10px;
+          padding: 25px;
+          border-left: 4px solid #ff7a42;
+        }
+
+        .virus-type-card h4 {
+          color: #e25a24;
+          margin-bottom: 15px;
+        }
+
+        .transmission-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 20px;
+          margin-top: 25px;
+        }
+
+        .transmission-item {
+          background: #fff;
+          border: 1px solid #e9ecef;
+          border-radius: 8px;
+          padding: 20px;
+          text-align: center;
+          transition: all 0.3s ease;
+        }
+
+        .disease-image {
+   width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin: 10px 0;
+  box-shadow: 0 10px 0px rgba(0,0,0,0.1);
+}
+
+.small-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin: 15px 0;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.hero-image-section {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.hero-image-section img {
+  width: 300px;
+  height: auto;
+  border: 30px solid #f3f2f0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: white;
+  padding: 30px;
+}
+
+.image-overlay h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+
+        .transmission-item:hover {
+          background: #f8f9fa;
+          border-color: #ff7a42;
+        }
+
+        .transmission-item i {
+          font-size: 2rem;
+          color: #ff7a42;
+          margin-bottom: 15px;
+        }
+
+        .symptoms-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 15px;
+          margin-top: 20px;
+        }
+
+        .symptom-tag {
+          background: linear-gradient(135deg, #ff7a42, #e25a24);
+          color: white;
+          padding: 12px 18px;
+          border-radius: 25px;
+          text-align: center;
+          font-weight: 500;
+          transition: transform 0.3s ease;
+        }
+
+        .symptom-tag:hover {
+          transform: scale(1.05);
+        }
+
+        .section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e25a24;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-caption {
+  font-size: 0.95rem;
+  color: #777;
+  font-style: italic;
+  margin-top: 10px;
+}
+.btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(226, 90, 36, 0.4);
+        background: linear-gradient(
+          135deg,
+          var(--primary-light) 0%,
+          var(--primary) 100%
+        );
+      }
+        @media (max-width: 768px) {
+          .disease-header h1 {
+            font-size: 2.2rem;
+          }
+          
+          .content-card {
+            padding: 25px;
+          }
+          
+          .content-card h2 {
+            font-size: 1.6rem;
+          }
+        }
+        </style>
+    </head>
+    
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+
+          <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="logo" href="{{ url_for ('home') }}" ><img src="../static/images/logo/gambar.png" alt="Logo"></a></li>
+                <a class="navbar-brand" href="{{ url_for ('home') }}" > <strong><span>MediChick</span><h1 class="custom-heading"></h1></strong></a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+
+                
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('about') }}"> About </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('deteksi') }}"> Diagnosa </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('detail_penyakit') }}"> Detail Penyakit </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('pencegahan_penyakit') }}">Pencegahan Penyakit </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('riwayat') }}"> Riwayat </a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                          <a href="#" role="button" class="nav-link dropdown-toggle custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown">
+                            <i class="bi bi-person me-1"></i>
+                            {% if username %}
+                              <span>{{ username }}</span>
+                            {% endif %}
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                              <a class="dropdown-item" href="{{ url_for('logout') }}"
+                                >Logout</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="disease-header">
+            <div class="container">
+                <h1 style="margin-top: 50px !important">Penyakit Feses Kapur</h1>
+                <p style="color: #fffefe;">Informasi penyakit feses kapur pada ayam</p>
+            </div>
+        </div>
+                <!-- Deskripsi -->
+                <div class="content-card">
+                  <h2>
+                    <div class="icon-badge">
+                        <i class="bi bi-info-circle"></i>
+                    </div>
+                    Deskripsi Penyakit
+                </h2>
+                <div class="hero-image-section">
+                  <img src="../static/images/detail/Feses Kapur.png" alt="Gambar Penyakit Feses Kapur"/>
+                </div>
+                    <p>
+                      Feses kapur atau sering dikenal dengan nama penyakit <em>pullorum</em> merupakan infeksi bakteri yang disebabkan oleh <em>salmonella pullorum</em> yang berasal dari keluarga <em>enterobacteriaceae</em>. Bakteri tersebut dapat menyebabkan feses berwarna putih serta gejala akut yang sistemik pada anak ayam. Dalam keadaan yang lebih lanjut, feses ayam yang terinfeksi akan berubah dari putih menjadi hijau dan menjadi berair. Penyakit ini mempunyai tingkat penyebaran yang sangat cepat. Penyakit ini biasa menyerang anak ayam pada usia 0-10 hari.
+                    </p>
+                </div>
+
+                <!-- Gejala -->
+                <div class="content-card">
+                    <h2>
+                        <div class="icon-badge">
+                            <i class="bi bi-exclamation-triangle"></i>
+                        </div>
+                        Gejala Penyakit Feses Kapur
+                    </h2>
+                    <p>Berikut adalah gejala-gejala yang dapat diamati pada ayam yang terinfeksi penyakit feses kapur:</p>
+                    
+                    <div class="symptoms-grid">
+                        <div class="symptom-tag">Lemas</div>
+                        <div class="symptom-tag">Nafsu Makan Turun</div>
+                        <div class="symptom-tag">Bulu Kusam</div>
+                        <div class="symptom-tag">Perut Membesar</div>
+                        <div class="symptom-tag">Diare</div>
+                        <div class="symptom-tag">Lumpuh</div>
+                    </div>
+                </div>
+
+                <!-- Penyebab & Penularan -->
+                <div class="content-card">
+                    <h2>
+                        <div class="icon-badge">
+                            <i class="bi bi-bug"></i>
+                        </div>
+                        Penyebab & Penularan
+                    </h2>
+                    
+                    <h3>Penyebab</h3>
+                    <p>
+                      Penyakit feses kapur disebabkan oleh bakteri salmonella. Bakteri ini ialah bakteri yang dapat bertahan di dalam tanah hingga satu tahun dan memiliki kemampuan adaptasi tinggi terhadap inangnya. Bakteri ini dapat menyebabkan diare pada ayam yang terinfeksi, dengan tingkat penularan yang cepat dan risiko kematian yang cukup tinggi. Selain itu, infeksi yang terjadi berdampak pada penurunan telur. Bakteri ini juga menyerang fungsi hati dan jantung, yang dapat memperburuk kondisi kesehatan ayam.
+                    </p>
+
+                    <h3>Penularan</h3>
+                    <p>Penularan penyakit ini dapat terjadi dengan berbagai cara, diantaranya:</p>
+                  
+                    <div class="transmission-grid">
+                        <div class="transmission-item">
+                            <h4>Kontak Langsung dengan Media yang Terkontaminasi</h4>
+                            <p> 
+                              Bakteri yang menyebabkan feses kapur ini dapat bertahan berjam-jam diluar inang dan hidup di berbagai tempat, seperti tempat makan, sumber air, dinding kandang, serta peralatan ternak. Ayam yang bersentuhan langsung dengan media tersebut memiliki risiko tinggi terinfeksi.
+                            </p>
+                        </div>
+                        <div class="transmission-item">
+                            <h4>Faktor Keturunan Induk</h4>
+                            <p>
+                              Induk ayam yang terinfeksi berak kapur berpotensi menularkan penyakit ini kepada keturunannya, sehingga anak ayam yang baru menetas berisiko mengalami infeksi yang serupa. Risiko ini dapat dikurangi dengan memilih DOC yang berkualitas unggul.
+                            </p>
+                        </div>
+                        <div class="transmission-item">
+                          <h4>Kanibalisme</h4>
+                          <p>
+                            Bakteri penyebab feses kapur ini dapat menyebar melalui darah ternak, yang menjadi media penularan cepat. Jika ayam melakukan kanibalisme, maka ada kemungkinan mengisap darah ayam yang terinfeksi, sehingga meningkatkan risiko penyebaran penyakit.
+                          </p>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content-card" style="text-align: center;">
+              <h2>
+                <div class="icon-badge">
+                  <i class="bi bi-play-circle"></i>
+                </div>
+                Video Informasi
+              </h2>
+            
+              <div class="video-container">
+                <iframe
+                width="598"
+                height="336"
+                src="https://www.youtube.com/embed/rI7uyRus9-g?si=-3y5L2bNyejGVlyc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            
+              
+            </div>
+            <p class="video-caption" style="text-align: center !important;">
+              Apa itu Pullorum atau Berak Kapur?
+            </p>
+          
+            <a href="{{ url_for('detail_penyakit') }}" class="btn mt-4" style="background: #e25a24;">
+              Kembali
+            </a>
+        </section>
+                
+        </main>
+
+        <footer class="site-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <h4 style="font-family: Poppins, sans-serif !important;">MediChick</h4>
+                <p class="copyright-text mt-4" style="font-family: Poppins, sans-serif !important;">
+                  Copyright © 2025 <strong>MediChick</strong>
+                </p>
+              </div>
+        
+              <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <h5 style="font-family: Poppins, sans-serif !important;">Sitemap</h5>
+                <ul class="footer-menu">
+                  <li class="footer-menu-item">
+                    <a href="{{ url_for('about') }}" class="footer-menu-link">About</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a href="{{ url_for('deteksi') }}" class="footer-menu-link">Deteksi</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a href="{{ url_for('detail_penyakit') }}" class="footer-menu-link">Detail Penyakit</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a
+                  href="{{ url_for ('pencegahan_penyakit') }}"
+                  class="footer-menu-link" style="white-space: nowrap
+                  !important;"  
+                  >Pencegahan Penyakit</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a href="{{ url_for('riwayat') }}" class="footer-menu-link">Riwayat</a>
+                  </li>
+                </ul>
+              </div>
+            </div> 
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/Headroom.js"></script>
+        <script src="../static/js/jQuery.headroom.js"></script>
+        <script src="../static/js/slick.min.js"></script>
+        <script src="../static/js/custom.js"></script>
+        <script>
+          window.addEventListener("pageshow", function(event) {
+            if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+              window.location.reload();
+            }
+          });
+        </script>        
+    </body>
+</html>

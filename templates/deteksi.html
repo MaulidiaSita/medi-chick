@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Sistem Deteksi</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/art.css" />
+    <style>
+      .container h1 {
+        color: #502a2a;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .container p {
+        color: #666;
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 18px;
+      }
+
+      #gejalaForm {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #eee;
+      }
+
+      th {
+        background-color: #e64b24;
+        color: white;
+        font-weight: 600;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      input[type="radio"] {
+        transform: scale(1.2);
+        margin: 0 auto;
+        display: block;
+        cursor: pointer;
+      }
+
+      button {
+        background: #ce4836;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 8px;
+        display: block;
+        margin: 20px auto 0;
+        transition: all 0.3s ease;
+        font-weight: 600;
+      }
+
+      button:hover {
+        background: #cf2f2f;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(230, 62, 62, 0.938);
+      }
+      /* Tambahan untuk preloader */
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="preloader">
+      <div class="spinner">
+        <span class="sk-inner-circle"></span>
+      </div>
+    </section>
+    <main>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <a class="logo" href="{{ url_for('home') }}"
+            ><img src="../static/images/logo/gambar.png" alt="Logo"
+          /></a>
+          <a class="navbar-brand" href="{{ url_for('home') }}"
+            ><strong><span>MediChick</span></strong></a
+          >
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('deteksi') }}">
+                  Diagnosa
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('detail_penyakit') }}"
+                  >Detail Penyakit</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('pencegahan_penyakit') }}"
+                  >Pencegahan Penyakit</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('riwayat') }}">Riwayat</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  role="button"
+                  class="nav-link dropdown-toggle bi bi-person custom-icon me-3"
+                  id="navbarDropdown"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                > <i class="bi-biperson me-1"></i> <span>{{ username }}</span></a
+                ></a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="{{ url_for('logout') }}"
+                      >Logout</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="products section-padding">
+        <div class="container">
+          <h1>Ayo Cek Sekarang !</h1>
+          <p>
+            Silakan pilih gejala ayam yang timbul, lalu klik tombol "Prediksi
+            Penyakit".
+          </p>
+
+          <form id="gejalaForm" action="/deteksi" method="POST">
+            <table>
+              <tr>
+                <th>Gejala</th>
+                <th>Ya</th>
+                <th>Tidak</th>
+              </tr>
+
+              <tr>
+                <td>Lesu</td>
+                <td>
+                  <input type="radio" name="gejala1" value="1" data-index="1" />
+                </td>
+                <td>
+                  <input type="radio" name="gejala1" value="0" data-index="0" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Nafsu Makan Turun</td>
+                <td>
+                  <input type="radio" name="gejala2" value="1" data-index="1" />
+                </td>
+                <td>
+                  <input type="radio" name="gejala2" value="0" data-index="0" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Nafas Sesak</td>
+                <td>
+                  <input type="radio" name="gejala3" value="1" data-index="1" />
+                </td>
+                <td>
+                  <input type="radio" name="gejala3" value="0" data-index="0" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Nafas Ngorok</td>
+                <td>
+                  <input type="radio" name="gejala4" value="1" data-index="1" />
+                </td>
+                <td>
+                  <input type="radio" name="gejala4" value="0" data-index="0" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Bulu Kusam</td>
+                <td>
+                  <input type="radio" name="gejala5" value="1" data-index="1" />
+                </td>
+                <td>
+                  <input type="radio" name="gejala5" value="0" data-index="0" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Lemas</td>
+                <td>
+                  <input type="radio" name="gejala6" value="1" data-index="1" />
+                </td>
+                <td>
+                  <input type="radio" name="gejala6" value="0" data-index="0" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Bersin</td>
+                <td>
+                  <input type="radio" name="gejala7" value="1" data-index="1" />
+                </td>
+                <td>
+                  <input type="radio" name="gejala7" value="0" data-index="0" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Batuk</td>
+                <td>
+                  <input type="radio" name="gejala8" value="1" data-index="1" />
+                </td>
+                <td>
+                  <input type="radio" name="gejala8" value="0" data-index="0" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Diare</td>
+                <td>
+                  <input type="radio" name="gejala9" value="1" data-index="1" />
+                </td>
+                <td>
+                  <input type="radio" name="gejala9" value="0" data-index="0" />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Lumpuh</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala10"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala10"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Mencabuti Bulu Sekitar Kloaka</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala11"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala11"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Kepala Berputar</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala12"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala12"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Perut Membesar</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala13"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala13"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Badan Kurus</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala14"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala14"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Kaki Pincang</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala15"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala15"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Kotoran Kehijauan</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala16"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala16"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Penurunan Berat Badan</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala17"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala17"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Mata Berair</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala18"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala18"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Kotoran Berwarna Putih</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala19"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala19"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Pembengkakan Daerah Mata</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala20"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala20"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Nafas Berat</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala21"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala21"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Mengeluarkan Bunyi</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala22"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala22"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Radang</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala23"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala23"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Sayap Menggantung</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala24"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala24"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Inkoordinasi</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala25"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala25"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Bulu Berdiri</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala26"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala26"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Gemetar</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala27"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala27"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Jengger Berwarna Biru</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala28"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala28"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Kolaka Kotor dan Basah</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala29"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala29"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Mata Sayup</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala30"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala30"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dehidrasi</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala31"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala31"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Demam</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala32"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala32"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Bintik Merah</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala33"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala33"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Pucat</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala34"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala34"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Bulu Sekitar Kloaka Lengket</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala35"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala35"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>Lendir Dari Mulut dan Hidung</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala36"
+                    value="1"
+                    data-index="1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    name="gejala36"
+                    value="0"
+                    data-index="0"
+                  />
+                </td>
+              </tr>
+            </table>
+            <button type="submit">Prediksi Penyakit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <h4>MediChick</h4>
+            <p
+              class="copyright-text mt-4"
+              style="
+                font-family: Poppins, sans-serif !important;
+                color: rgba(255, 255, 255, 0.6) !important;
+                font-size: 0.9rem !important;
+                padding-top: 20px !important;
+                margin-bottom: 1rem !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+                text-align: left !important;
+              "
+            >
+              Copyright © 2025 <strong>MediChick</strong>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <h5>Sitemap</h5>
+            <ul class="footer-menu">
+              <li class="footer-menu-item">
+                <a href="{{ url_for('about') }}" class="footer-menu-link"
+                  >About</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a href="{{ url_for('deteksi') }}" class="footer-menu-link"
+                  >Deteksi</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a
+                  href="{{ url_for('detail_penyakit') }}"
+                  class="footer-menu-link"
+                  >Detail Penyakit</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a
+                  href="{{ url_for ('pencegahan_penyakit') }}"
+                  class="footer-menu-link"
+                  style="white-space: nowrap !important"
+                  >Pencegahan Penyakit</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a href="{{ url_for('riwayat') }}" class="footer-menu-link"
+                  >Riwayat</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Tutup div.row -->
+      </div>
+      <!-- Tutup div.container -->
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/Headroom.js"></script>
+    <script src="../static/js/jQuery.headroom.js"></script>
+    <script src="../static/js/slick.min.js"></script>
+    <script src="../static/js/custom.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Tangani event submit form
+        const form = document.getElementById("gejalaForm");
+
+        if (form) {
+          form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Mencegah pengiriman form default
+
+            let allSelected = true;
+            let symptoms = [];
+
+            for (let i = 1; i <= 36; i++) {
+              const radioName = `gejala${i}`;
+              const selectedRadio = document.querySelector(
+                `input[name="${radioName}"]:checked`
+              );
+
+              if (!selectedRadio) {
+                allSelected = false;
+                break;
+              }
+
+              symptoms.push(selectedRadio.value);
+            }
+
+            if (!allSelected) {
+              alert(
+                "Silakan pilih semua gejala (Ya/Tidak) sebelum melakukan prediksi."
+              );
+              return;
+            }
+
+            // Buat input tersembunyi untuk mengirim data
+            const hiddenInput = document.createElement("input");
+            hiddenInput.type = "hidden";
+            hiddenInput.name = "text";
+            hiddenInput.value = symptoms.join(",");
+
+            // Tambahkan dan kirim
+            this.appendChild(hiddenInput);
+            this.submit();
+          });
+        } else {
+          console.error("Form dengan id #gejalaForm tidak ditemukan");
+        }
+
+        // Inisialisasi ChickenPredictor hanya jika tombolnya ada
+        const openButton = document.querySelector(".predictor__button");
+
+        if (!openButton) {
+          console.error(
+            "Element dengan class .predictor__button tidak ditemukan"
+          );
+          return;
+        }
+
+        const predictor = new ChickenPredictor();
+        predictor.display();
+      });
+    </script>
+    <script src="../static/js/app.js"></script>
+  </body>
+</html>

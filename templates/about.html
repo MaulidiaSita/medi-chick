@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title> About</title>
+
+        <!-- CSS FILES -->
+       <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" >
+        <link rel="stylesheet"type="text/css" href="../static/css/bootstrap-icons.css" >
+
+        <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+
+        <link rel="stylesheet"type="text/css" href="../static/css/art.css">
+        <style>
+        p {
+          font-family: "Merriweather", sans-serif;
+        }
+
+       .features-section {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.features-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, rgba(240, 252, 232, 0.8), rgba(245, 255, 245, 0.6));
+  z-index: 0;
+}
+
+.section-title {
+  margin-bottom: 60px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.section-title h2:after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #e25a24, #ff7a42);
+  border-radius: 4px;
+}
+
+.section-title p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  padding: 40px 30px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  transition: all 0.4s ease;
+  text-align: center;
+  margin-bottom: 40px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #e25a24, #ff7a42);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.feature-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 40px rgba(76, 175, 80, 0.2);
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-icon {
+  margin-bottom: 30px;
+  font-size: 2.8rem;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
+             -5px -5px 15px rgba(255, 255, 255, 0.8);
+  color: #ff7a42;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+  color: #ffffff;
+  background: linear-gradient(145deg, #e25a24, #ff7a42);
+  box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+  transform: scale(1.1);
+}
+
+.feature-card h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.feature-card:hover h3 {
+  color: #ff7a42;
+}
+
+.feature-card p {
+  color: #666;
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 30px 20px;
+  }
+  
+  .feature-icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 2.2rem;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+}
+     </style>
+    </head>
+    
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+
+          <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="logo" href="{{ url_for ('home') }}" ><img src="../static/images/logo/gambar.png" alt="Logo"></a></li>
+                <a class="navbar-brand" href="{{ url_for ('home') }}" > <strong><span>MediChick</span><h1 class="custom-heading"></h1></strong></a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+
+                
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('about') }}"> About </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('deteksi') }}"> Diagnosa </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('detail_penyakit') }}"> Detail Penyakit </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('pencegahan_penyakit') }}">Pencegahan Penyakit </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('riwayat') }}"> Riwayat </a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                          <a href="#" role="button" class="nav-link dropdown-toggle custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown">
+                            <i class="bi bi-person me-1"></i>
+                            {% if username %}
+                              <span>{{ username }}</span>
+                            {% endif %}
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                              <a class="dropdown-item" href="{{ url_for('logout') }}"
+                                >Logout</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+            <header class="site-header section-padding-img site-header-image">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12 header-info">
+                            <h1>
+                                <span class="d-block text-primary"> MediChick </span>
+                            </h1>
+                            <p>Mari mulai deteksi dini dan pencegahan penyakit ayam bersama kami!</p>
+                            <p>MediChick merupakan sebuah sistem prediksi penyakit pada ayam broiler berbasis teknologi yang mampu mendeteksi penyakit lebih awal. 
+                               Sistem ini dibuat untuk membantu para peternak dalam pencegahan penyakit ayam yang menyebar luas serta untuk meningkatkan efisiensi manajemen peternakan. 
+                               MediChick ini memiliki fitur untuk mendeteksi peyakit berdarkan gejala yang diinputkan, tidak hanya itu dalam sistem ini terdapat penjelasan mengenai penyakit dari hasil deteksi tersebut. 
+                               Kemudian, terdapat saran - saran untuk pencegahan penyakit serta dashboard untuk laporan kesehatan ternak.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="../static/images/logo/gambar.png" class="header-image img-fluid" alt="">
+            </header>
+
+            <section class="features-section">
+              <div class="container">
+                <div class="section-title">
+                  <h2>Fitur Utama</h2>
+                  <p>
+                    MediChick hadir dengan berbagai fitur untuk menunjang kesehatan ternak Anda
+                  </p>
+                </div>
+            
+                <div class="features-grid">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="bi bi-search"></i>
+                    </div>
+                    <h3>Deteksi Penyakit</h3>
+                    <p>
+                      Deteksi penyakit ayam berdasarkan gejala yang diinputkan dengan akurasi tinggi
+                    </p>
+                  </div>
+            
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="bi bi-journal-medical"></i>
+                    </div>
+                    <h3>Detail Penyakit</h3>
+                    <p>
+                      Penjelasan mendetail tentang berbagai penyakit ayam dan cara mengidentifikasinya
+                    </p>
+                  </div>
+            
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Pencegahan</h3>
+                    <p>
+                      Saran pencegahan dan penanganan untuk berbagai penyakit ayam
+                    </p>
+                  </div>
+            
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="bi bi-clock-history"></i>
+                    </div>
+                    <h3>Riwayat Deteksi</h3>
+                    <p>
+                      Pantau dan simpan riwayat deteksi penyakit pada ternak Anda
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>                
+        </main>
+
+        <footer class="site-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <h4>MediChick</h4>
+                <p class="copyright-text mt-4" style="font-family: Poppins, sans-serif !important;">
+                  Copyright © 2025 <strong>MediChick</strong>
+                </p>
+              </div>
+        
+              <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <h5>Sitemap</h5>
+                <ul class="footer-menu">
+                  <li class="footer-menu-item">
+                    <a href="{{ url_for('about') }}" class="footer-menu-link">About</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a href="{{ url_for('deteksi') }}" class="footer-menu-link">Deteksi</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a href="{{ url_for('detail_penyakit') }}" class="footer-menu-link">Detail Penyakit</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a
+                  href="{{ url_for ('pencegahan_penyakit') }}"
+                  class="footer-menu-link" style="white-space: nowrap
+                  !important;"  
+                  >Pencegahan Penyakit</a>
+                  </li>
+                  <li class="footer-menu-item">
+                    <a href="{{ url_for('riwayat') }}" class="footer-menu-link">Riwayat</a>
+                  </li>
+                </ul>
+              </div>
+            </div> 
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/Headroom.js"></script>
+        <script src="../static/js/jQuery.headroom.js"></script>
+        <script src="../static/js/slick.min.js"></script>
+        <script src="../static/js/custom.js"></script>
+        <script>
+          window.addEventListener("pageshow", function(event) {
+            if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+              window.location.reload();
+            }
+          });
+        </script>        
+    </body>
+</html>

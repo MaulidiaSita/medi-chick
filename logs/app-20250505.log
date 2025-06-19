@@ -1,0 +1,416 @@
+2025-05-05 10:16:30,834 - INFO - Aplikasi dimulai
+2025-05-05 10:16:30,910 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-05-05 10:16:30,918 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 10:16:30,926 - INFO -  * Restarting with stat
+2025-05-05 10:17:11,208 - INFO - Aplikasi dimulai
+2025-05-05 10:17:11,293 - WARNING -  * Debugger is active!
+2025-05-05 10:17:11,353 - INFO -  * Debugger PIN: 628-196-805
+2025-05-05 10:17:14,199 - INFO - 127.0.0.1 - - [05/May/2025 10:17:14] "GET / HTTP/1.1" 200 -
+2025-05-05 10:17:18,108 - INFO - 127.0.0.1 - - [05/May/2025 10:17:18] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-05-05 10:17:18,108 - INFO - 127.0.0.1 - - [05/May/2025 10:17:18] "GET /static/css/bootstrap-icons.css HTTP/1.1" 200 -
+2025-05-05 10:17:18,318 - INFO - 127.0.0.1 - - [05/May/2025 10:17:18] "GET /static/css/slick.css HTTP/1.1" 200 -
+2025-05-05 10:17:18,341 - INFO - 127.0.0.1 - - [05/May/2025 10:17:18] "GET /static/images/logo/gambar.png HTTP/1.1" 200 -
+2025-05-05 10:17:18,465 - INFO - 127.0.0.1 - - [05/May/2025 10:17:18] "GET /static/images/slideshow/Home.png HTTP/1.1" 200 -
+2025-05-05 10:17:18,478 - INFO - 127.0.0.1 - - [05/May/2025 10:17:18] "GET /static/css/art.css HTTP/1.1" 200 -
+2025-05-05 10:17:19,073 - INFO - 127.0.0.1 - - [05/May/2025 10:17:19] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+2025-05-05 10:17:19,467 - INFO - 127.0.0.1 - - [05/May/2025 10:17:19] "GET /static/images/slideshow/Home2.png HTTP/1.1" 200 -
+2025-05-05 10:17:19,671 - INFO - 127.0.0.1 - - [05/May/2025 10:17:19] "GET /static/images/about/About.png HTTP/1.1" 200 -
+2025-05-05 10:17:19,798 - INFO - 127.0.0.1 - - [05/May/2025 10:17:19] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-05-05 10:17:20,044 - INFO - 127.0.0.1 - - [05/May/2025 10:17:20] "GET /static/js/jQuery.headroom.js HTTP/1.1" 200 -
+2025-05-05 10:17:20,186 - INFO - 127.0.0.1 - - [05/May/2025 10:17:20] "GET /static/js/Headroom.js HTTP/1.1" 200 -
+2025-05-05 10:17:20,455 - INFO - 127.0.0.1 - - [05/May/2025 10:17:20] "GET /static/js/slick.min.js HTTP/1.1" 200 -
+2025-05-05 10:17:20,735 - INFO - 127.0.0.1 - - [05/May/2025 10:17:20] "GET /static/js/custom.js HTTP/1.1" 200 -
+2025-05-05 10:17:20,862 - INFO - 127.0.0.1 - - [05/May/2025 10:17:20] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-05-05 10:20:18,951 - INFO - 127.0.0.1 - - [05/May/2025 10:20:18] "GET /static/fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d HTTP/1.1" 200 -
+2025-05-05 10:20:31,765 - INFO - 127.0.0.1 - - [05/May/2025 10:20:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-05 10:20:59,441 - INFO - 127.0.0.1 - - [05/May/2025 10:20:59] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 10:20:59,970 - INFO - 127.0.0.1 - - [05/May/2025 10:20:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 10:21:00,386 - INFO - 127.0.0.1 - - [05/May/2025 10:21:00] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 10:21:00,386 - INFO - 127.0.0.1 - - [05/May/2025 10:21:00] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 10:21:00,526 - INFO - 127.0.0.1 - - [05/May/2025 10:21:00] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 10:21:00,551 - INFO - 127.0.0.1 - - [05/May/2025 10:21:00] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:00,643 - INFO - 127.0.0.1 - - [05/May/2025 10:21:00] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 10:21:00,734 - INFO - 127.0.0.1 - - [05/May/2025 10:21:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:00,831 - INFO - 127.0.0.1 - - [05/May/2025 10:21:00] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:00,980 - INFO - 127.0.0.1 - - [05/May/2025 10:21:00] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:01,065 - INFO - 127.0.0.1 - - [05/May/2025 10:21:01] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:01,158 - INFO - 127.0.0.1 - - [05/May/2025 10:21:01] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:01,164 - INFO - 127.0.0.1 - - [05/May/2025 10:21:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:01,260 - INFO - 127.0.0.1 - - [05/May/2025 10:21:01] "[36mGET /static/fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d HTTP/1.1[0m" 304 -
+2025-05-05 10:21:48,752 - INFO - 127.0.0.1 - - [05/May/2025 10:21:48] "[32mPOST /predict HTTP/1.1[0m" 302 -
+2025-05-05 10:21:48,790 - INFO - 127.0.0.1 - - [05/May/2025 10:21:48] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 10:21:48,988 - INFO - 127.0.0.1 - - [05/May/2025 10:21:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,009 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,010 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,026 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,089 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,213 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,313 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,390 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,447 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,473 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,488 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 10:21:49,488 - INFO - 127.0.0.1 - - [05/May/2025 10:21:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 11:06:44,782 - INFO - Aplikasi dimulai
+2025-05-05 11:06:44,917 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-05-05 11:06:44,919 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 11:06:44,930 - INFO -  * Restarting with stat
+2025-05-05 11:06:55,281 - INFO - Aplikasi dimulai
+2025-05-05 11:06:55,310 - WARNING -  * Debugger is active!
+2025-05-05 11:06:55,352 - INFO -  * Debugger PIN: 628-196-805
+2025-05-05 11:07:15,783 - INFO - 127.0.0.1 - - [05/May/2025 11:07:15] "GET / HTTP/1.1" 200 -
+2025-05-05 11:07:16,862 - INFO - 127.0.0.1 - - [05/May/2025 11:07:16] "[36mGET /static/images/slideshow/Home.png HTTP/1.1[0m" 304 -
+2025-05-05 11:07:16,881 - INFO - 127.0.0.1 - - [05/May/2025 11:07:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 11:07:16,901 - INFO - 127.0.0.1 - - [05/May/2025 11:07:16] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 11:07:16,909 - INFO - 127.0.0.1 - - [05/May/2025 11:07:16] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 11:07:16,911 - INFO - 127.0.0.1 - - [05/May/2025 11:07:16] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,014 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,066 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,134 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/images/slideshow/Home2.png HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,148 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/images/about/About.png HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,150 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,161 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,173 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,436 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,817 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,851 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:17,890 - INFO - 127.0.0.1 - - [05/May/2025 11:07:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:27,338 - INFO - 127.0.0.1 - - [05/May/2025 11:07:27] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 11:07:33,078 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,088 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,089 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,094 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,095 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,098 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,571 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,571 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,577 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,593 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,593 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:07:33,597 - INFO - 127.0.0.1 - - [05/May/2025 11:07:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,064 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[32mPOST /predict HTTP/1.1[0m" 302 -
+2025-05-05 11:08:32,097 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 11:08:32,326 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,328 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,336 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,342 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,355 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,464 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,602 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,698 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,722 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,759 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,831 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:08:32,858 - INFO - 127.0.0.1 - - [05/May/2025 11:08:32] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:40:52,903 - INFO - Aplikasi dimulai
+2025-05-05 11:40:52,958 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-05-05 11:40:52,968 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 11:40:52,968 - INFO -  * Restarting with stat
+2025-05-05 11:41:00,568 - INFO - Aplikasi dimulai
+2025-05-05 11:41:00,583 - WARNING -  * Debugger is active!
+2025-05-05 11:41:00,595 - INFO -  * Debugger PIN: 628-196-805
+2025-05-05 11:41:07,838 - INFO - 127.0.0.1 - - [05/May/2025 11:41:07] "GET / HTTP/1.1" 200 -
+2025-05-05 11:41:08,488 - INFO - 127.0.0.1 - - [05/May/2025 11:41:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:08,541 - INFO - 127.0.0.1 - - [05/May/2025 11:41:08] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:08,548 - INFO - 127.0.0.1 - - [05/May/2025 11:41:08] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:08,618 - INFO - 127.0.0.1 - - [05/May/2025 11:41:08] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:08,688 - INFO - 127.0.0.1 - - [05/May/2025 11:41:08] "[36mGET /static/images/slideshow/Home.png HTTP/1.1[0m" 304 -
+2025-05-05 11:41:08,773 - INFO - 127.0.0.1 - - [05/May/2025 11:41:08] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:08,837 - INFO - 127.0.0.1 - - [05/May/2025 11:41:08] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 11:41:08,917 - INFO - 127.0.0.1 - - [05/May/2025 11:41:08] "[36mGET /static/images/slideshow/Home2.png HTTP/1.1[0m" 304 -
+2025-05-05 11:41:09,030 - INFO - 127.0.0.1 - - [05/May/2025 11:41:09] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:09,483 - INFO - 127.0.0.1 - - [05/May/2025 11:41:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:09,533 - INFO - 127.0.0.1 - - [05/May/2025 11:41:09] "[36mGET /static/images/about/About.png HTTP/1.1[0m" 304 -
+2025-05-05 11:41:09,590 - INFO - 127.0.0.1 - - [05/May/2025 11:41:09] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:09,652 - INFO - 127.0.0.1 - - [05/May/2025 11:41:09] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:09,765 - INFO - 127.0.0.1 - - [05/May/2025 11:41:09] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:09,808 - INFO - 127.0.0.1 - - [05/May/2025 11:41:09] "[36mGET /static/fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d HTTP/1.1[0m" 304 -
+2025-05-05 11:41:09,868 - INFO - 127.0.0.1 - - [05/May/2025 11:41:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:12,812 - INFO - 127.0.0.1 - - [05/May/2025 11:41:12] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 11:41:12,957 - INFO - 127.0.0.1 - - [05/May/2025 11:41:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,066 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,102 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,132 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,142 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,166 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,307 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,383 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,388 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,399 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,403 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:13,405 - INFO - 127.0.0.1 - - [05/May/2025 11:41:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,383 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[32mPOST /predict HTTP/1.1[0m" 302 -
+2025-05-05 11:41:59,403 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 11:41:59,530 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,530 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,530 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,533 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,533 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,536 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,618 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,621 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,627 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,632 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,733 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 11:41:59,782 - INFO - 127.0.0.1 - - [05/May/2025 11:41:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 12:29:52,360 - INFO - Aplikasi dimulai
+2025-05-05 12:29:52,485 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-05-05 12:29:52,491 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 12:29:52,503 - INFO -  * Restarting with stat
+2025-05-05 12:30:06,957 - INFO - Aplikasi dimulai
+2025-05-05 12:30:07,000 - WARNING -  * Debugger is active!
+2025-05-05 12:30:07,080 - INFO -  * Debugger PIN: 628-196-805
+2025-05-05 12:30:07,218 - INFO - 127.0.0.1 - - [05/May/2025 12:30:07] "GET / HTTP/1.1" 200 -
+2025-05-05 12:30:08,366 - INFO - 127.0.0.1 - - [05/May/2025 12:30:08] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 12:30:08,374 - INFO - 127.0.0.1 - - [05/May/2025 12:30:08] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 12:30:08,532 - INFO - 127.0.0.1 - - [05/May/2025 12:30:08] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 12:30:08,561 - INFO - 127.0.0.1 - - [05/May/2025 12:30:08] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:08,599 - INFO - 127.0.0.1 - - [05/May/2025 12:30:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 12:30:08,611 - INFO - 127.0.0.1 - - [05/May/2025 12:30:08] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 12:30:08,841 - INFO - 127.0.0.1 - - [05/May/2025 12:30:08] "[36mGET /static/images/slideshow/Home.png HTTP/1.1[0m" 304 -
+2025-05-05 12:30:08,936 - INFO - 127.0.0.1 - - [05/May/2025 12:30:08] "[36mGET /static/images/slideshow/Home2.png HTTP/1.1[0m" 304 -
+2025-05-05 12:30:08,966 - INFO - 127.0.0.1 - - [05/May/2025 12:30:08] "[36mGET /static/images/about/About.png HTTP/1.1[0m" 304 -
+2025-05-05 12:30:09,007 - INFO - 127.0.0.1 - - [05/May/2025 12:30:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:09,011 - INFO - 127.0.0.1 - - [05/May/2025 12:30:09] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:09,110 - INFO - 127.0.0.1 - - [05/May/2025 12:30:09] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:09,232 - INFO - 127.0.0.1 - - [05/May/2025 12:30:09] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:09,399 - INFO - 127.0.0.1 - - [05/May/2025 12:30:09] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:09,782 - INFO - 127.0.0.1 - - [05/May/2025 12:30:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:09,799 - INFO - 127.0.0.1 - - [05/May/2025 12:30:09] "[36mGET /static/fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d HTTP/1.1[0m" 304 -
+2025-05-05 12:30:13,273 - INFO - 127.0.0.1 - - [05/May/2025 12:30:13] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 12:30:13,599 - INFO - 127.0.0.1 - - [05/May/2025 12:30:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 12:30:13,716 - INFO - 127.0.0.1 - - [05/May/2025 12:30:13] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 12:30:13,771 - INFO - 127.0.0.1 - - [05/May/2025 12:30:13] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 12:30:13,800 - INFO - 127.0.0.1 - - [05/May/2025 12:30:13] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 12:30:13,849 - INFO - 127.0.0.1 - - [05/May/2025 12:30:13] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 12:30:13,961 - INFO - 127.0.0.1 - - [05/May/2025 12:30:13] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:14,095 - INFO - 127.0.0.1 - - [05/May/2025 12:30:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:14,224 - INFO - 127.0.0.1 - - [05/May/2025 12:30:14] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:14,291 - INFO - 127.0.0.1 - - [05/May/2025 12:30:14] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:14,298 - INFO - 127.0.0.1 - - [05/May/2025 12:30:14] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:14,413 - INFO - 127.0.0.1 - - [05/May/2025 12:30:14] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 12:30:14,528 - INFO - 127.0.0.1 - - [05/May/2025 12:30:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 12:31:11,841 - INFO - 127.0.0.1 - - [05/May/2025 12:31:11] "[32mPOST /predict HTTP/1.1[0m" 302 -
+2025-05-05 12:31:11,842 - INFO - 127.0.0.1 - - [05/May/2025 12:31:11] "[32mPOST /predict HTTP/1.1[0m" 302 -
+2025-05-05 12:31:11,899 - INFO - 127.0.0.1 - - [05/May/2025 12:31:11] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 12:31:12,128 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,130 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,144 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,146 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,158 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,217 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,271 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,347 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,352 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,354 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,358 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 12:31:12,359 - INFO - 127.0.0.1 - - [05/May/2025 12:31:12] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:22:05,375 - INFO - Aplikasi dimulai
+2025-05-05 14:22:05,505 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-05-05 14:22:05,509 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 14:22:05,520 - INFO -  * Restarting with stat
+2025-05-05 14:22:59,651 - INFO - Aplikasi dimulai
+2025-05-05 14:22:59,705 - WARNING -  * Debugger is active!
+2025-05-05 14:22:59,752 - INFO -  * Debugger PIN: 628-196-805
+2025-05-05 14:22:59,864 - INFO - 127.0.0.1 - - [05/May/2025 14:22:59] "GET / HTTP/1.1" 200 -
+2025-05-05 14:23:04,414 - INFO - 127.0.0.1 - - [05/May/2025 14:23:04] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:04,439 - INFO - 127.0.0.1 - - [05/May/2025 14:23:04] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:04,466 - INFO - 127.0.0.1 - - [05/May/2025 14:23:04] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:04,486 - INFO - 127.0.0.1 - - [05/May/2025 14:23:04] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 14:23:04,496 - INFO - 127.0.0.1 - - [05/May/2025 14:23:04] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:04,504 - INFO - 127.0.0.1 - - [05/May/2025 14:23:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:04,766 - INFO - 127.0.0.1 - - [05/May/2025 14:23:04] "[36mGET /static/images/slideshow/Home.png HTTP/1.1[0m" 304 -
+2025-05-05 14:23:05,530 - INFO - 127.0.0.1 - - [05/May/2025 14:23:05] "[36mGET /static/images/slideshow/Home2.png HTTP/1.1[0m" 304 -
+2025-05-05 14:23:05,738 - INFO - 127.0.0.1 - - [05/May/2025 14:23:05] "[36mGET /static/images/about/About.png HTTP/1.1[0m" 304 -
+2025-05-05 14:23:05,863 - INFO - 127.0.0.1 - - [05/May/2025 14:23:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:06,313 - INFO - 127.0.0.1 - - [05/May/2025 14:23:06] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:06,458 - INFO - 127.0.0.1 - - [05/May/2025 14:23:06] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:06,678 - INFO - 127.0.0.1 - - [05/May/2025 14:23:06] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:06,777 - INFO - 127.0.0.1 - - [05/May/2025 14:23:06] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:06,880 - INFO - 127.0.0.1 - - [05/May/2025 14:23:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:07,281 - INFO - 127.0.0.1 - - [05/May/2025 14:23:07] "[36mGET /static/fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d HTTP/1.1[0m" 304 -
+2025-05-05 14:23:07,736 - INFO - 127.0.0.1 - - [05/May/2025 14:23:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-05 14:23:30,464 - INFO - 127.0.0.1 - - [05/May/2025 14:23:30] "GET /beranda HTTP/1.1" 200 -
+2025-05-05 14:23:30,896 - INFO - 127.0.0.1 - - [05/May/2025 14:23:30] "[33mGET /static/css/chat.css HTTP/1.1[0m" 404 -
+2025-05-05 14:23:30,950 - INFO - 127.0.0.1 - - [05/May/2025 14:23:30] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:30,969 - INFO - 127.0.0.1 - - [05/May/2025 14:23:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:31,028 - INFO - 127.0.0.1 - - [05/May/2025 14:23:31] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:31,034 - INFO - 127.0.0.1 - - [05/May/2025 14:23:31] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:31,115 - INFO - 127.0.0.1 - - [05/May/2025 14:23:31] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:31,256 - INFO - 127.0.0.1 - - [05/May/2025 14:23:31] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 14:23:31,272 - INFO - 127.0.0.1 - - [05/May/2025 14:23:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:31,280 - INFO - 127.0.0.1 - - [05/May/2025 14:23:31] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:31,280 - INFO - 127.0.0.1 - - [05/May/2025 14:23:31] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:31,289 - INFO - 127.0.0.1 - - [05/May/2025 14:23:31] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:31,727 - INFO - 127.0.0.1 - - [05/May/2025 14:23:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:31,727 - INFO - 127.0.0.1 - - [05/May/2025 14:23:31] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,253 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 14:23:35,404 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,468 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,511 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,521 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,566 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,674 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,715 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,861 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,902 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,947 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:35,995 - INFO - 127.0.0.1 - - [05/May/2025 14:23:35] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:23:36,004 - INFO - 127.0.0.1 - - [05/May/2025 14:23:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 14:24:26,991 - INFO - 127.0.0.1 - - [05/May/2025 14:24:26] "[32mPOST /predict HTTP/1.1[0m" 302 -
+2025-05-05 14:24:27,209 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 14:24:27,496 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,509 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,509 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,517 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,591 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,641 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,649 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,658 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,695 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,725 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,733 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:24:27,733 - INFO - 127.0.0.1 - - [05/May/2025 14:24:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 14:26:37,685 - INFO -  * Detected change in 'D:\\KULIAH\\Semester 8\\Tugas Akhir\\Website\\website\\app.py', reloading
+2025-05-05 14:26:39,954 - INFO -  * Restarting with stat
+2025-05-05 14:27:30,848 - INFO - Aplikasi dimulai
+2025-05-05 14:27:30,911 - WARNING -  * Debugger is active!
+2025-05-05 14:27:30,939 - INFO -  * Debugger PIN: 628-196-805
+2025-05-05 14:53:07,965 - INFO - Aplikasi dimulai
+2025-05-05 14:53:08,070 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-05-05 14:53:08,070 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 14:53:08,092 - INFO -  * Restarting with stat
+2025-05-05 14:53:17,966 - INFO - Aplikasi dimulai
+2025-05-05 14:53:17,982 - WARNING -  * Debugger is active!
+2025-05-05 14:53:18,036 - INFO -  * Debugger PIN: 628-196-805
+2025-05-05 14:53:35,752 - INFO - 127.0.0.1 - - [05/May/2025 14:53:35] "GET / HTTP/1.1" 200 -
+2025-05-05 14:53:36,345 - INFO - 127.0.0.1 - - [05/May/2025 14:53:36] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 14:53:36,393 - INFO - 127.0.0.1 - - [05/May/2025 14:53:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:36,403 - INFO - 127.0.0.1 - - [05/May/2025 14:53:36] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:36,509 - INFO - 127.0.0.1 - - [05/May/2025 14:53:36] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:36,570 - INFO - 127.0.0.1 - - [05/May/2025 14:53:36] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:36,641 - INFO - 127.0.0.1 - - [05/May/2025 14:53:36] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:36,737 - INFO - 127.0.0.1 - - [05/May/2025 14:53:36] "[36mGET /static/images/slideshow/Home.png HTTP/1.1[0m" 304 -
+2025-05-05 14:53:36,790 - INFO - 127.0.0.1 - - [05/May/2025 14:53:36] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:36,901 - INFO - 127.0.0.1 - - [05/May/2025 14:53:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:36,987 - INFO - 127.0.0.1 - - [05/May/2025 14:53:36] "[36mGET /static/images/about/About.png HTTP/1.1[0m" 304 -
+2025-05-05 14:53:37,152 - INFO - 127.0.0.1 - - [05/May/2025 14:53:37] "[36mGET /static/images/slideshow/Home2.png HTTP/1.1[0m" 304 -
+2025-05-05 14:53:37,285 - INFO - 127.0.0.1 - - [05/May/2025 14:53:37] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:37,378 - INFO - 127.0.0.1 - - [05/May/2025 14:53:37] "[36mGET /static/fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d HTTP/1.1[0m" 304 -
+2025-05-05 14:53:37,439 - INFO - 127.0.0.1 - - [05/May/2025 14:53:37] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:37,520 - INFO - 127.0.0.1 - - [05/May/2025 14:53:37] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:37,639 - INFO - 127.0.0.1 - - [05/May/2025 14:53:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:40,569 - INFO - 127.0.0.1 - - [05/May/2025 14:53:40] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 14:53:40,838 - INFO - 127.0.0.1 - - [05/May/2025 14:53:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:40,844 - INFO - 127.0.0.1 - - [05/May/2025 14:53:40] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:40,856 - INFO - 127.0.0.1 - - [05/May/2025 14:53:40] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:40,866 - INFO - 127.0.0.1 - - [05/May/2025 14:53:40] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:40,894 - INFO - 127.0.0.1 - - [05/May/2025 14:53:40] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:41,072 - INFO - 127.0.0.1 - - [05/May/2025 14:53:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:41,241 - INFO - 127.0.0.1 - - [05/May/2025 14:53:41] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 14:53:41,241 - INFO - 127.0.0.1 - - [05/May/2025 14:53:41] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:41,248 - INFO - 127.0.0.1 - - [05/May/2025 14:53:41] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:41,335 - INFO - 127.0.0.1 - - [05/May/2025 14:53:41] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:41,394 - INFO - 127.0.0.1 - - [05/May/2025 14:53:41] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:41,405 - INFO - 127.0.0.1 - - [05/May/2025 14:53:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,061 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[32mPOST /predict HTTP/1.1[0m" 302 -
+2025-05-05 14:53:45,107 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 14:53:45,412 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,414 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,414 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,502 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,522 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,730 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,732 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,732 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,732 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,792 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,936 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:53:45,990 - INFO - 127.0.0.1 - - [05/May/2025 14:53:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,296 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[32mPOST /predict HTTP/1.1[0m" 302 -
+2025-05-05 14:54:25,333 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 14:54:25,523 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,524 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,538 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,585 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,637 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,651 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,786 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,824 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,874 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,921 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,949 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 14:54:25,969 - INFO - 127.0.0.1 - - [05/May/2025 14:54:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 16:02:48,989 - INFO - Aplikasi dimulai
+2025-05-05 16:02:49,347 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-05-05 16:02:49,347 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 16:02:49,347 - INFO -  * Restarting with stat
+2025-05-05 16:03:22,293 - INFO - Aplikasi dimulai
+2025-05-05 16:03:22,331 - WARNING -  * Debugger is active!
+2025-05-05 16:03:22,365 - INFO -  * Debugger PIN: 628-196-805
+2025-05-05 16:03:22,498 - INFO - 127.0.0.1 - - [05/May/2025 16:03:22] "GET / HTTP/1.1" 200 -
+2025-05-05 16:03:23,506 - INFO - 127.0.0.1 - - [05/May/2025 16:03:23] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-05-05 16:03:23,526 - INFO - 127.0.0.1 - - [05/May/2025 16:03:23] "GET /static/css/bootstrap-icons.css HTTP/1.1" 200 -
+2025-05-05 16:03:23,565 - INFO - 127.0.0.1 - - [05/May/2025 16:03:23] "GET /static/images/logo/gambar.png HTTP/1.1" 200 -
+2025-05-05 16:03:23,659 - INFO - 127.0.0.1 - - [05/May/2025 16:03:23] "GET /static/css/slick.css HTTP/1.1" 200 -
+2025-05-05 16:03:23,719 - INFO - 127.0.0.1 - - [05/May/2025 16:03:23] "GET /static/css/art.css HTTP/1.1" 200 -
+2025-05-05 16:03:23,730 - INFO - 127.0.0.1 - - [05/May/2025 16:03:23] "GET /static/images/slideshow/Home.png HTTP/1.1" 200 -
+2025-05-05 16:03:23,852 - INFO - 127.0.0.1 - - [05/May/2025 16:03:23] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+2025-05-05 16:03:23,875 - INFO - 127.0.0.1 - - [05/May/2025 16:03:23] "GET /static/images/slideshow/Home2.png HTTP/1.1" 200 -
+2025-05-05 16:03:24,045 - INFO - 127.0.0.1 - - [05/May/2025 16:03:24] "GET /static/images/about/About.png HTTP/1.1" 200 -
+2025-05-05 16:03:24,050 - INFO - 127.0.0.1 - - [05/May/2025 16:03:24] "GET /static/js/jQuery.headroom.js HTTP/1.1" 200 -
+2025-05-05 16:03:24,051 - INFO - 127.0.0.1 - - [05/May/2025 16:03:24] "GET /static/js/Headroom.js HTTP/1.1" 200 -
+2025-05-05 16:03:24,067 - INFO - 127.0.0.1 - - [05/May/2025 16:03:24] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-05-05 16:03:24,152 - INFO - 127.0.0.1 - - [05/May/2025 16:03:24] "GET /static/js/slick.min.js HTTP/1.1" 200 -
+2025-05-05 16:03:24,431 - INFO - 127.0.0.1 - - [05/May/2025 16:03:24] "GET /static/js/custom.js HTTP/1.1" 200 -
+2025-05-05 16:03:24,607 - INFO - 127.0.0.1 - - [05/May/2025 16:03:24] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-05-05 16:03:24,963 - INFO - 127.0.0.1 - - [05/May/2025 16:03:24] "GET /static/fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d HTTP/1.1" 200 -
+2025-05-05 16:03:31,706 - INFO - 127.0.0.1 - - [05/May/2025 16:03:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-05 16:03:37,426 - INFO - 127.0.0.1 - - [05/May/2025 16:03:37] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 16:03:37,783 - INFO - 127.0.0.1 - - [05/May/2025 16:03:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 16:03:37,794 - INFO - 127.0.0.1 - - [05/May/2025 16:03:37] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 16:03:37,823 - INFO - 127.0.0.1 - - [05/May/2025 16:03:37] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 16:03:37,906 - INFO - 127.0.0.1 - - [05/May/2025 16:03:37] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 16:03:37,974 - INFO - 127.0.0.1 - - [05/May/2025 16:03:37] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 16:03:38,061 - INFO - 127.0.0.1 - - [05/May/2025 16:03:38] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 16:03:38,096 - INFO - 127.0.0.1 - - [05/May/2025 16:03:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 16:03:38,248 - INFO - 127.0.0.1 - - [05/May/2025 16:03:38] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 16:03:38,263 - INFO - 127.0.0.1 - - [05/May/2025 16:03:38] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 16:03:38,360 - INFO - 127.0.0.1 - - [05/May/2025 16:03:38] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 16:03:38,394 - INFO - 127.0.0.1 - - [05/May/2025 16:03:38] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 16:03:38,497 - INFO - 127.0.0.1 - - [05/May/2025 16:03:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-05-05 16:04:23,724 - INFO - 127.0.0.1 - - [05/May/2025 16:04:23] "[32mPOST /predict HTTP/1.1[0m" 302 -
+2025-05-05 16:04:23,805 - INFO - 127.0.0.1 - - [05/May/2025 16:04:23] "GET /deteksi HTTP/1.1" 200 -
+2025-05-05 16:04:24,080 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,089 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,095 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/css/slick.css HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,216 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/css/art.css HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,225 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/images/logo/gambar.png HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,229 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,445 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,489 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/js/jQuery.headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,579 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/js/slick.min.js HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,581 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/js/Headroom.js HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,611 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+2025-05-05 16:04:24,707 - INFO - 127.0.0.1 - - [05/May/2025 16:04:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
