@@ -151,7 +151,7 @@ def login():
         if user and user['password'] == password:
             session['loggedin'] = True
             session['username'] = user['username']
-            return redirect(next_page or url_for('riwayat'))
+            return redirect(next_page or url_for('home'))
         else:
             flash('Login gagal. Email atau password salah.', 'danger')
             return redirect(url_for('login', next=next_page))
@@ -194,7 +194,7 @@ def about():
 @app.route('/deteksi', methods=['GET', 'POST'])
 def deteksi():
     if 'loggedin' not in session:
-        flash('Harap login terlebih dahulu untuk mengakses halaman deteksi', 'danger')
+        flash('Harap login terlebih dahulu untuk mengakses halaman diagnosa', 'danger')
         return redirect(url_for('login', next=request.path))
 
     username = session.get('username')
@@ -260,36 +260,43 @@ def detail_penyakit():
 # Standardize disease page routes
 @app.route('/tetelo')
 def tetelo():
-    
-    return render_template('tetelo.html')
+    username = session.get('username')
+    return render_template('tetelo.html',username=username)
 
 @app.route('/feses-kapur')
 def feses_kapur():
-    return render_template('feses_kapur.html')
+    username = session.get('username')
+    return render_template('feses_kapur.html', username=username)
 
 @app.route('/gumboro')
 def gumboro():
-    return render_template('gumboro.html')
+    username = session.get('username')
+    return render_template('gumboro.html', username=username)
 
 @app.route('/penyakit-ngorok')
 def penyakit_ngorok():
-    return render_template('penyakit_ngorok.html')
+    username = session.get('username')
+    return render_template('penyakit_ngorok.html', username=username)
 
 @app.route('/flu-burung')
 def flu_burung():
-    return render_template('flu_burung.html')
+    username = session.get('username')
+    return render_template('flu_burung.html', username=username)
 
 @app.route('/kolibasilosis')
 def kolibasilosis():
-    return render_template('kolibasilosis.html')
+    username = session.get('username')
+    return render_template('kolibasilosis.html', username=username)
 
 @app.route('/snot')
 def snot():
-    return render_template('snot.html')
+    username = session.get('username')
+    return render_template('snot.html', username=username)
 
 @app.route('/kolera')
 def kolera():
-    return render_template('kolera.html')
+    username = session.get('username')
+    return render_template('kolera.html', username=username)
 
 @app.route("/pencegahan_penyakit")
 def pencegahan_penyakit():
@@ -299,41 +306,49 @@ def pencegahan_penyakit():
 # Standardize prevention page routes
 @app.route('/pencegahan/tetelo')
 def pencegahan_tetelo():
-    return render_template('pencegahan_tetelo.html')
+    username = session.get('username')
+    return render_template('pencegahan_tetelo.html', username=username)
 
 @app.route('/pencegahan/feses-kapur')
 def pencegahan_feses_kapur():
-    return render_template('pencegahan_feses_kapur.html')
+    username = session.get('username')
+    return render_template('pencegahan_feses_kapur.html', username=username)
 
 @app.route('/pencegahan/gumboro')
 def pencegahan_gumboro():
-    return render_template('pencegahan_gumboro.html')
+    username = session.get('username')
+    return render_template('pencegahan_gumboro.html', username=username)
 
 @app.route('/pencegahan/penyakit-ngorok')
 def pencegahan_penyakit_ngorok():
-    return render_template('pencegahan_penyakit_ngorok.html')
+    username = session.get('username')
+    return render_template('pencegahan_penyakit_ngorok.html', username=username)
 
 @app.route('/pencegahan/flu-burung')
 def pencegahan_flu_burung():
-    return render_template('pencegahan_flu_burung.html')
+    username = session.get('username')
+    return render_template('pencegahan_flu_burung.html', username=username)
 
 @app.route('/pencegahan/kolibasilosis')
 def pencegahan_kolibasilosis():
-    return render_template('pencegahan_kolibasilosis.html')
+    username = session.get('username')
+    return render_template('pencegahan_kolibasilosis.html', username=username)
 
 @app.route('/pencegahan/snot')
 def pencegahan_snot():
-    return render_template('pencegahan_snot.html')
+    username = session.get('username')
+    return render_template('pencegahan_snot.html', username=username)
 
 @app.route('/pencegahan/kolera')
 def pencegahan_kolera():
-    return render_template('pencegahan_kolera.html')
+    username = session.get('username')
+    return render_template('pencegahan_kolera.html', username=username)
 
 @app.route("/riwayat")
 def riwayat():
-    if 'loggedin' not in session or not session['loggedin']:
-        flash('Silakan login terlebih dahulu untuk melihat riwayat prediksi', 'warning')
-        return redirect(url_for('login'))
+    if 'loggedin' not in session:
+        flash('Harap login terlebih dahulu untuk mengakses halaman riwayat', 'danger')
+        return redirect(url_for('login', next=request.path))
     
     try:
         cursor = mysql.connection.cursor()

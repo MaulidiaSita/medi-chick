@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Halaman Login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
@@ -21,19 +21,18 @@
       type="text/css"
       href="../static/css/bootstrap-icons.css"
     />
-
     <link rel="stylesheet" type="text/css" href="../static/css/slick.css" />
-
     <link rel="stylesheet" type="text/css" href="../static/css/art.css" />
 
     <style>
       body {
-        font-family: "poppins", sans-serif;
+        font-family: "Poppins", sans-serif;
         background: rgb(247, 236, 228);
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        margin: 0;
       }
 
       .login-container {
@@ -47,19 +46,42 @@
       h2 {
         text-align: center;
         margin-bottom: 20px;
+        font-weight: 600;
+        color: #e44225;
       }
 
       label {
         display: block;
         margin: 10px 0 5px;
+        font-weight: 500;
       }
 
-      input {
+      input[type="email"],
+      input[type="password"],
+      input[type="text"] {
         width: 100%;
-        padding: 8px;
+        padding: 10px;
+        padding-right: 40px;
         margin-bottom: 15px;
         border: 1px solid #ccc;
         border-radius: 6px;
+        font-size: 14px;
+        box-sizing: border-box;
+        height: 45px;
+      }
+
+      .password-wrapper {
+        position: relative;
+      }
+
+      .password-wrapper i {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #888;
+        font-size: 18px;
       }
 
       button {
@@ -70,6 +92,8 @@
         border: none;
         border-radius: 6px;
         cursor: pointer;
+        font-weight: 500;
+        font-size: 16px;
       }
 
       button:hover {
@@ -81,13 +105,31 @@
         text-align: center;
         margin-top: 10px;
       }
+
+      .register-link {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+      }
+
+      .register-link a {
+        color: #e44225;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      .alert {
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+      }
     </style>
   </head>
   <body>
     <div class="login-container">
       <h2>Login</h2>
 
-      <!-- Menampilkan pesan error dengan menggunakan Flask flash -->
       {% with messages = get_flashed_messages(with_categories=true) %} {% if
       messages %}
       <ul>
@@ -97,39 +139,25 @@
       </ul>
       {% endif %} {% endwith %}
 
-      <!-- Form login -->
       <form action="{{ url_for('login', next=next) }}" method="POST">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required />
 
-        <div style="position: relative">
-          <label for="password">Password</label>
+        <label for="password">Password</label>
+        <div class="password-wrapper">
           <input type="password" id="password" name="password" required />
-          <i
-            class="bi bi-eye-slash"
-            id="togglePassword"
-            style="
-              position: absolute;
-              top: 50%;
-              right: 10px;
-              transform: translateY(-50%);
-              cursor: pointer;
-            "
-          >
-          </i>
+          <i class="bi bi-eye-slash" id="togglePassword"></i>
         </div>
 
         <input type="hidden" name="next" value="{{ next }}" />
-
         <button type="submit">Masuk</button>
       </form>
 
-      <p style="text-align: center; margin-top: 15px">
+      <p class="register-link">
         Belum punya akun?
         <a href="{{ url_for('register', next=next) }}">Daftar di sini</a>
       </p>
 
-      <!-- Error message -->
       <p id="error" class="error"></p>
     </div>
 
@@ -140,6 +168,7 @@
     <script src="../static/js/slick.min.js"></script>
     <script src="../static/js/custom.js"></script>
     <script src="../static/js/app.js"></script>
+
     <script>
       const togglePassword = document.getElementById("togglePassword");
       const passwordInput = document.getElementById("password");
@@ -150,8 +179,6 @@
             ? "text"
             : "password";
         passwordInput.setAttribute("type", type);
-
-        // Ganti icon
         this.classList.toggle("bi-eye");
         this.classList.toggle("bi-eye-slash");
       });
